@@ -1,23 +1,27 @@
-package com.example.seulobinho
+package com.example.seulobinho.FragmentRemedio
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.view.get
-import androidx.core.view.size
 import androidx.recyclerview.widget.RecyclerView
+import com.example.seulobinho.R
 import com.example.seulobinho.model.Remedio
 
 class RemediosAdapter( private val listaRemedios: MutableList<Remedio>) : RecyclerView.Adapter<RemediosAdapter.viewHolder>(){
 
-    fun adicionarRemedio(lista: MutableList<Remedio>,novoRemedio: Remedio){
-        if (novoRemedio.nome == "null" && novoRemedio.mensagem == "null" && novoRemedio.horario == "null" && novoRemedio.imagem == null) {
-
-        }else{
-            lista.add(novoRemedio)
+    fun adicionarRemedio(novoRemedio: Remedio){
+//        if (novoRemedio.nome == "null" && novoRemedio.mensagem == "null" && novoRemedio.horario == "null" && novoRemedio.imagem == null) {
+            //add xml|fragment vazio
+//        }else{
+//            lista.add(novoRemedio)
             notifyDataSetChanged()
+//        }
+    }
+    companion object{
+        fun notificar(){
+
         }
     }
 
@@ -37,7 +41,6 @@ class RemediosAdapter( private val listaRemedios: MutableList<Remedio>) : Recycl
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
 //-------------Quero reverter a lista tt----------------------------------------------------------------
-//            listaRemedios.reverse()
             listaRemedios[position].imagem?.let {
                 holder.imagemRemedio.setImageBitmap(it)
             }

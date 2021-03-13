@@ -15,11 +15,13 @@
             android:background="@color/colorPrimary"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:tabTextColor="@color/ColorBranco"
+    >
 
 <!--        <ImageView-->
 <!--            android:id="@+id/txtLogoMain"-->
-<!--            android:background="@drawable/img_background_radiun"-->
+<!--            andr    oid:background="@drawable/img_background_radiun"-->
 <!--            android:src="@drawable/ic_main4"-->
 <!--            android:layout_width="80dp"-->
 <!--            android:layout_height="80dp"-->

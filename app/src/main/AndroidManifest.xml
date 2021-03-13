@@ -9,7 +9,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".NovoItemActivity">
+        <activity android:name=".FragmentoExames.NovoExameActivity">
+        </activity>
+        <activity android:name=".FragmentConsulta.NovaConsultaActivity">
+        </activity>
+        <activity android:name=".FragmentRemedio.NovoRemedioActivity">
         </activity>
         <activity android:name=".cadastrarNovoItem">
         </activity>

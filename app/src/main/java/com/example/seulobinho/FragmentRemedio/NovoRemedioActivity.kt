@@ -1,4 +1,4 @@
-package com.example.seulobinho
+package com.example.seulobinho.FragmentRemedio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.seulobinho.MainActivity
+import com.example.seulobinho.R
 import com.example.seulobinho.model.Remedio
-import kotlinx.android.synthetic.main.activity_main.*
 
-class NovoItemActivity : AppCompatActivity() {
+class NovoRemedioActivity : AppCompatActivity() {
 
     lateinit var nomeRemedio:EditText
     lateinit var descricaoRemedio:EditText
@@ -17,7 +18,7 @@ class NovoItemActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_novo_item)
+        setContentView(R.layout.activity_novo_remedio)
 
 
         val botaoFinalizarCadastro = findViewById<Button>(R.id.btnCadastrar)
@@ -49,22 +50,24 @@ class NovoItemActivity : AppCompatActivity() {
     }
 
     fun acaoBtn(){
-        Toast.makeText(this, "Cadastrado!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Remedio Cadastrado!", Toast.LENGTH_SHORT).show()
     }
 
-    fun redirecionarCadastro(remedio: Remedio){
-
-        val chaveNomeRemedio = "Nome"
-        val chaveTextoRemedio = "Descricao"
-        val chaveFrequenciaRemedio = "Frequencia"
-
-        val destinoActivity = Intent(this, MainActivity::class.java)
-        destinoActivity.putExtra(chaveNomeRemedio, remedio.nome)
-        destinoActivity.putExtra(chaveTextoRemedio, remedio.mensagem)
-        destinoActivity.putExtra(chaveFrequenciaRemedio, remedio.horario)
-
-        startActivity(destinoActivity)
-    }
+   fun redirecionarCadastro(remedio: Remedio){
+//
+//        val chaveNomeRemedio = "Nome"
+//        val chaveTextoRemedio = "Descricao"
+//        val chaveFrequenciaRemedio = "Frequencia"
+//
+//        val destinoActivity = Intent(this, MainActivity::class.java)
+//        destinoActivity.putExtra(chaveNomeRemedio, remedio.nome)
+//        destinoActivity.putExtra(chaveTextoRemedio, remedio.mensagem)
+//        destinoActivity.putExtra(chaveFrequenciaRemedio, remedio.horario)
+//
+//        startActivity(destinoActivity)
+       MainActivity.listaRemediosAD.add(remedio)
+       finish()
+   }
 
 
 }

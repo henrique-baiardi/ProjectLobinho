@@ -5,16 +5,15 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FragmentRemedio.RemediosFragment">
+        tools:context=".FragmentoExames.ExamesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listaRemedios"
+            android:id="@+id/listaExames"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
-<!--            tools:listitem="@layout/item_remedio"-->
-
+    <!--            tools:listitem="@layout/item_exame"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

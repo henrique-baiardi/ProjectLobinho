@@ -4,16 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TableLayout
 import android.widget.Toast
-import androidx.core.view.isEmpty
-import androidx.core.view.size
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
+import com.example.seulobinho.FragmentRemedio.NovoRemedioActivity
+import com.example.seulobinho.FragmentRemedio.RemediosAdapter
 import com.example.seulobinho.model.Remedio
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,10 +17,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//
+
         val tabLayout = findViewById<TabLayout>(R.id.meuTabLayout)
         val viewPager = findViewById<ViewPager>(R.id.mineViewPage)
 
-        viewPager.adapter = PageRemedioAdapter(supportFragmentManager)
+        viewPager.adapter = PagesAdapter(supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
         
 //-------------------------------------------------------------------------------------------------------
@@ -35,9 +33,8 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Click", Toast.LENGTH_SHORT).show()
 
-            val destinoActivity = Intent(this, NovoItemActivity::class.java)
+            val destinoActivity = Intent(this, NovoRemedioActivity::class.java)
             startActivity(destinoActivity)
-            finish()
         }
 
 /////////-------------------A GABIARRA DA RAINHA-------------------------------------------------------------
@@ -55,6 +52,9 @@ class MainActivity : AppCompatActivity() {
 
 
     }//--FIM ONCREATE--//
+    companion object{
+        val listaRemediosAD = mutableListOf<Remedio>()
+    }
 
 
 }

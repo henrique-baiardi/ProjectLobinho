@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="ColorItemRemedio">#03A9F4</color>
+    <color name="ColorBranco">#FFFFFF</color>
+    <color name="ColorRosaClaro">#F9D2D8</color>
 </resources>
