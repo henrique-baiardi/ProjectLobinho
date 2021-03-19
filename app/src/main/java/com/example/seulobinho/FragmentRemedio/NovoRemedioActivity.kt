@@ -65,6 +65,7 @@ class NovoRemedioActivity : AppCompatActivity() {
 //        destinoActivity.putExtra(chaveFrequenciaRemedio, remedio.horario)
 //
 //        startActivity(destinoActivity)
+
        MainActivity.listaRemediosAD.add(remedio)
        finish()
    }

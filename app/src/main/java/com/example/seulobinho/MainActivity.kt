@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//
-
         val tabLayout = findViewById<TabLayout>(R.id.meuTabLayout)
         val viewPager = findViewById<ViewPager>(R.id.mineViewPage)
 
@@ -49,12 +47,9 @@ class MainActivity : AppCompatActivity() {
 
 /////////-------------------A GABIARRA DA RAINHA-------------------------------------------------------------
 
-
-
     }//--FIM ONCREATE--//
     companion object{
         val listaRemediosAD = mutableListOf<Remedio>()
     }
-
 
 }

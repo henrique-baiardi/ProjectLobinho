@@ -18,7 +18,6 @@ class PagesAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         return  when(position){
             0 -> RemediosFragment()
             1 -> ConsultaFragment()
-            //ExamesFragment
             2 -> ExamesFragment()
             else -> RemediosFragment()
         }
