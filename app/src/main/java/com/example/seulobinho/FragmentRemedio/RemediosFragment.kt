@@ -36,7 +36,7 @@ class RemediosFragment : Fragment() {
 
         val rvRemdeios = view.findViewById<RecyclerView>(R.id.listaRemedios)
 
-
+        //conector
         adapter = RemediosAdapter(MainActivity.listaRemediosAD)
         rvRemdeios.adapter = adapter
 
@@ -48,24 +48,7 @@ class RemediosFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         //controlar esse resume com if
-        adapter.notifyDataSetChanged()
+        adapter.notifyDataSetChanged()//volta p l35
     }
-
-
-
-
-
-
-
-    // criar o comunicador e pegar seus dados
-    //val model = ViewModelProviders.of(activity!!).get(Communicator::class.java)
-    //arguments bundle|
-
-//add na view mas nao funciona para a fragment =/
-//    val nomeRecebido = intent.extras?.get("Nome").toString()
-//    val descricaoRecebida = intent.extras?.get("Descricao").toString()
-//    val frequenciaRecebida = intent.extras?.get("Frequencia").toString()
-//
-//    adapterRemedio.adicionarRemedio(MainActivity.listaNovoRemedio, Remedio(null,nomeRecebido,descricaoRecebida,frequenciaRecebida))
 
 }

@@ -22,7 +22,7 @@ class PagesAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             else -> RemediosFragment()
         }
     }
-
+    //Nome dos fragmentos|ixibidos
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position){
             0 -> "Remedios"

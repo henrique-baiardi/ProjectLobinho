@@ -10,13 +10,6 @@ import com.example.seulobinho.R
 import com.example.seulobinho.model.Exame
 
 class ExamesAdapter(private val listaExames: MutableList<Exame>) : RecyclerView.Adapter<ExamesAdapter.viewHolder>() {
-    fun adicionarExame(lista: MutableList<Exame>, novoExame: Exame){
-//        if (novoExame.nome == "null" && novoExame.mensagem == "null" && novoExame.horario == "null" && novoExame.imagem == null) {
-//        }else{
-        lista.add(novoExame) //posso por (0, novoExame), mas acho q subEscreve
-        notifyDataSetChanged()
-//        }
-    }
 
     class viewHolder(view: View) : RecyclerView.ViewHolder(view){
         val nomeExame: TextView = view.findViewById(R.id.txtNomeExame)
@@ -33,9 +26,9 @@ class ExamesAdapter(private val listaExames: MutableList<Exame>) : RecyclerView.
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-//-------------Quero reverter a lista tt----------------------------------------------------------------
-        //sugestao sandy: add item asReaverse() | na activity ou em um ciclo de vida especifico
-//            listaExames.reverse()
+//---Reverter a lista || listaExames.reverse()---
+// sugestao sandy: add item asReaverse() | na activity ou em um ciclo de vida especifico
+
         listaExames[position].imagem?.let {
             holder.imagemExame.setImageBitmap(it)
         }

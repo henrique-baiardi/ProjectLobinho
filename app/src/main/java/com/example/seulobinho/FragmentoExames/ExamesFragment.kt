@@ -41,10 +41,4 @@ class ExamesFragment : Fragment() {
 
     }
 
-//    val nomeRecebido = intent.extras?.get("Nome").toString()
-//    val descricaoRecebida = intent.extras?.get("Descricao").toString()
-//    val frequenciaRecebida = intent.extras?.get("Frequencia").toString()
-
-//    adapterRemedio.adicionarRemedio(MainActivity.listaNovoRemedio, Remedio(null,nomeRecebido,descricaoRecebida,frequenciaRecebida))
-
 }

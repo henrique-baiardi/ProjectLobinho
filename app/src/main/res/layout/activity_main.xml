@@ -19,18 +19,6 @@
             app:tabTextColor="@color/ColorBranco"
     >
 
-<!--        <ImageView-->
-<!--            android:id="@+id/txtLogoMain"-->
-<!--            andr    oid:background="@drawable/img_background_radiun"-->
-<!--            android:src="@drawable/ic_main4"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:layout_gravity="center_vertical"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:layout_margin="5dp"-->
-<!--        />-->
-
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -51,10 +39,10 @@
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:background="@drawable/img_background_add"
-            android:text="+  Adicionar"
+            android:text="@string/adicionarbtn"
             android:textAllCaps="false"
             android:textStyle="normal"
-            android:textSize="22dp"
+            android:textSize="22sp"
             android:layout_marginBottom="45dp"
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"

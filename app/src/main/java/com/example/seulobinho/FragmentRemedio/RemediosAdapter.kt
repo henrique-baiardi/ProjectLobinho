@@ -11,18 +11,10 @@ import com.example.seulobinho.model.Remedio
 
 class RemediosAdapter( private val listaRemedios: MutableList<Remedio>) : RecyclerView.Adapter<RemediosAdapter.viewHolder>(){
 
-    fun adicionarRemedio(novoRemedio: Remedio){
-//        if (novoRemedio.nome == "null" && novoRemedio.mensagem == "null" && novoRemedio.horario == "null" && novoRemedio.imagem == null) {
-            //add xml|fragment vazio
-//        }else{
-//            lista.add(novoRemedio)
-            notifyDataSetChanged()
-//        }
-    }
-    companion object{
-        fun notificar(){
 
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_remedio, parent, false)
+        return viewHolder(view)
     }
 
     class viewHolder(view: View) : RecyclerView.ViewHolder(view){
@@ -33,14 +25,8 @@ class RemediosAdapter( private val listaRemedios: MutableList<Remedio>) : Recycl
 
     }
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_remedio, parent, false)
-        return viewHolder(view)
-    }
-
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-//-------------Quero reverter a lista tt----------------------------------------------------------------
+//-------------Disposicao da Lista RV---------------------------------
             listaRemedios[position].imagem?.let {
                 holder.imagemRemedio.setImageBitmap(it)
             }

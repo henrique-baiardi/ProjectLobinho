@@ -21,13 +21,12 @@ class NovaConsultaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nova_consulta)
 
-    //*********************************************************************************
-        val botaoFinalizarCadastro = findViewById<Button>(R.id.btnCadastrar)
-
-        //tirar da val daqui e por antes do onCreate
         nomeRemedio = findViewById(R.id.edtNomeRemedio)
         descricaoRemedio = findViewById(R.id.edtDescricaoRemdeio)
         frequenciaDose = findViewById(R.id.edtFrequencia)
+
+//*********************************************************************************
+        val botaoFinalizarCadastro = findViewById<Button>(R.id.btnCadastrar)
 
         botaoFinalizarCadastro.setOnClickListener {
             val nomeDigitado = nomeRemedio.text.toString()

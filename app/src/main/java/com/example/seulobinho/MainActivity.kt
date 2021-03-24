@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
         
 //-------------------------------------------------------------------------------------------------------
-        val addRemedio = findViewById<Button>(R.id.btnCadastrar)
 
         val botaoCadastrarRemedio = findViewById<Button>(R.id.btnAddRemedio)
         botaoCadastrarRemedio.setOnClickListener {
@@ -35,19 +34,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(destinoActivity)
         }
 
-/////////-------------------A GABIARRA DA RAINHA-------------------------------------------------------------
-
-//        val nomeRecebido = intent.extras?.get("Nome").toString()
-//        val descricaoRecebida = intent.extras?.get("Descricao").toString()
-//        val frequenciaRecebida = intent.extras?.get("Frequencia").toString()
-//
-////        if(listaNovoRemedio.isEmpty()){
-//        adapterRemedio.adicionarRemedio(MainActivity.listaNovoRemedio, Remedio(null,nomeRecebido,descricaoRecebida,frequenciaRecebida))
-////        }
-
-/////////-------------------A GABIARRA DA RAINHA-------------------------------------------------------------
-
-    }//--FIM ONCREATE--//
+    }
+    //Evita o Ondestroyer
     companion object{
         val listaRemediosAD = mutableListOf<Remedio>()
     }

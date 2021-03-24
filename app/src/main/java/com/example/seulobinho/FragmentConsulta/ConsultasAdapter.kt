@@ -10,13 +10,7 @@ import com.example.seulobinho.R
 import com.example.seulobinho.model.Consulta
 
 class ConsultasAdapter (private val listaConsultas: MutableList<Consulta>) : RecyclerView.Adapter<ConsultasAdapter.viewHolder>() {
-    fun adicionarRemedio(lista: MutableList<Consulta>, novaConsulta: Consulta){
-//        if (novoRemedio.nome == "null" && novoRemedio.mensagem == "null" && novoRemedio.horario == "null" && novoRemedio.imagem == null) {
-//        }else{
-        lista.add(novaConsulta)
-        notifyDataSetChanged()
-//        }
-    }
+
 
     class viewHolder(view: View) : RecyclerView.ViewHolder(view){
         val nomeMedicoConsulta: TextView = view.findViewById(R.id.txtNomeConsulta)
@@ -33,8 +27,7 @@ class ConsultasAdapter (private val listaConsultas: MutableList<Consulta>) : Rec
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-//-------------Quero reverter a lista tt----------------------------------------------------------------
-//            listaRemedios.reverse()
+//--Depois reverter a lista| listaRemedios.reverse() ------------------------------
         listaConsultas[position].imagem?.let {
             holder.imagemMedicoConsulta.setImageBitmap(it)
         }
